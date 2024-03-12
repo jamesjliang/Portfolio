@@ -1,0 +1,131 @@
+html, body {
+    /* overflow-x: hidden; */
+   min-height: 100vh;
+   margin-bottom: 100px; /* Adjust the value as needed */
+   
+}
+.fixed {
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+}
+body {
+   width: 1500px;
+   margin: 0 auto;
+   padding: 0;
+   font-family: 'Times New Roman', Times, serif;
+}
+/* ------- About Me Information Section ------*/
+.container {
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   padding: 70px 300px 5px; /* Adjust padding to add more white space */
+
+}
+.left-section, .right-section {
+   padding: 20px;
+   box-sizing: border-box;
+}
+.left-section {
+   width: 25%;
+   /*  background-color: #f0f0f0;*/
+   margin-right: 20px;
+}
+.circular-image {
+width: 200px; /* Set the width of the image */
+height: 200px; /* Set the height of the image */
+border-radius: 50%; /* Make the image circular */
+object-fit: cover; /* Ensure the image covers the entire container */
+}
+.right-section {
+   width: 75%;
+   font-size: 18px; /* Adjust the font size as needed */
+   /*background-color: #e0e0e0; */
+}
+.full_sections {
+   padding: 10px 300px;
+}
+
+
+/* ------- General Button ------*/
+.btn {
+background-color: #eeecec; /* Light grey background color */
+color: #444; /* Text color */
+border: none;
+border-radius: 5px; /* Curved border radius */
+padding: 6px 15px;
+
+margin-right: 10px; /* Adjust spacing between buttons */
+cursor: pointer;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.button-container {
+display: flex; /* Use flexbox to align buttons */
+}
+
+.btn:hover {
+   background-color: rgb(172, 169, 169)
+}
+
+.no-bot-margin {
+   margin-top: 10px; /* Space a little less top margin */
+   margin-bottom: 5px; /* Remove bottom margin */
+}
+.no-top-margin {
+   margin-top: 0; /* Remove top margin */
+}
+
+
+/* ------- Company Logos and Interactive button ------*/
+
+.icon-container {
+   display: block; /* Place each container on a new line */
+   margin-bottom: 10px; /* Add space between containers */
+}
+.icon-container a {
+   text-decoration: none; /* Remove underline for links */
+   color: inherit; /* Inherit color from parent */
+   display: flex; /* Make anchor a flex container */
+   align-items: center; /* Center vertically */
+}
+.icon-container img {
+   width: 28px; /* Adjust the width of the icon as needed */
+   height: 28px; /* Adjust the height of the icon as needed */
+   margin-right: 5px; /* Adjust spacing between icon and text as needed */
+   transition: transform 0.2s; /* Smooth transition on hover */
+}
+.icon-container span {
+   font-size: 16px; /* Adjust font size as needed */
+   line-height: 32px; /* Match the line height to the icon height */
+}
+.icon-container:hover img {
+   transform: scale(1.1); /* Increase size of the icon on hover */
+}
+.icon-container:hover span {
+   font-size: 18px; /* Increase font size of the text on hover */
+}
+
+
+
+
+/* ------- Image and caption ------*/
+.container_for_caption {
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   padding: 0px 300px 30px; /* Adjust padding to add more white space */
+   }
+
+.image {
+   flex: 0 0 auto; /* Make image non-flexible */
+   margin-right: 20px; /* Adjust spacing between image and text */
+}
+.image img {
+   width: 150px; /* Set width of the image */
+   height: auto; /* Maintain aspect ratio */
+}
+.description {
+   flex: 1; /* Make text and button flexible */
+}
