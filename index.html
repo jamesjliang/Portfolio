@@ -9,6 +9,8 @@
     if (/Mobi/.test(navigator.userAgent)) {
         // If the device is mobile, set a different initial scale
         document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=0.5');
+        // Position the content slightly to the right side for mobile devices
+        document.body.style.justifyContent = 'flex-end';
     }
 </script>
 <link rel="stylesheet" href="styles.css">
