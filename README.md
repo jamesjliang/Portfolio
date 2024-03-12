@@ -1,1 +1,3 @@
-# Personal-Website
+# Portfolio
+
+Resume and Personal Website
