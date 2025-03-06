@@ -31,6 +31,15 @@ body {
    flex-wrap: wrap; /* Allows sections to wrap on small screens */
 }
 
+/* NEW: Wrap left and right sections together */
+.section-container {
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   flex-wrap: wrap;
+   width: 100%;
+}
+
 .left-section, .right-section {
    padding: 20px;
    box-sizing: border-box;
@@ -67,10 +76,16 @@ body {
 }
 
 /* ------- Responsive Adjustments - Fix for Overlapping ------ */
-@media (max-width: 1100px) {  /* Trigger vertical layout earlier */
+@media (max-width: 1100px) {  
    .container {
       padding: 50px 5%; /* Reduce side padding */
       flex-direction: column; /* Stack sections on smaller screens */
+      align-items: center;
+   }
+
+   /* NEW: Make sure left-right sections stack together */
+   .section-container {
+      flex-direction: column; /* Stack left and right sections */
       align-items: center;
    }
 
@@ -188,7 +203,7 @@ body {
         margin-top: 15px; /* Ensures buttons don't stick to images */
     }
 
-   .full_sections {
+    .full_sections {
         padding: 5px 20px; 
         margin-bottom: 5px;
     }
