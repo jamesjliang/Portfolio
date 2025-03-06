@@ -3,9 +3,9 @@ html, body {
    padding-bottom: 100px; /* Better than margin-bottom */
    margin: 0;
    font-family: 'Times New Roman', Times, serif;
+   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Ensures adaptability on all screen sizes */
 body {
    max-width: 1500px;
    margin: 0 auto;
@@ -14,8 +14,8 @@ body {
 
 /* Heading styles */
 h2 {
-    margin-top: 5px; /* Reduce top spacing */
-    margin-bottom: 5px; /* Reduce bottom spacing */
+    margin-top: 5px; 
+    margin-bottom: 5px;
 }
 
 /* Fixed positioned elements */
@@ -23,7 +23,7 @@ h2 {
    position: fixed;
    bottom: 20px;
    right: 20px;
-   z-index: 1000; /* Ensures it stays above other elements */
+   z-index: 1000;
 }
 
 /* ------- About Me Information Section ------*/
@@ -31,11 +31,11 @@ h2 {
    display: flex;
    justify-content: center;
    align-items: flex-start;
-   padding: 50px 10%; /* Responsive padding */
-   flex-wrap: wrap; /* Allows sections to wrap on small screens */
+   padding: 70px 10%; 
+   flex-wrap: wrap; 
 }
 
-/* NEW: Wrap left and right sections together */
+/* Section grouping */
 .section-container {
    display: flex;
    justify-content: center;
@@ -49,88 +49,90 @@ h2 {
    box-sizing: border-box;
 }
 
+/* Left side profile section */
 .left-section {
    width: 25%;
    margin-right: 20px;
-   text-align: center; /* Centers image & text on small screens */
+   text-align: center;
 }
 
+/* Circular profile image */
 .circular-image {
-   width: 180px; /* Reduced for mobile */
+   width: 180px; 
    height: 180px;
    border-radius: 50%;
    object-fit: cover;
+   display: block;
 }
 
+/* Right section text */
 .right-section {
    width: 70%;
    font-size: 18px;
    line-height: 1.5;
 }
 
-/* Ensures proper spacing on larger screens */
+/* Ensures proper spacing */
 .full_sections {
-    padding: 5px 200px;  /* Adjust padding for readability */
-    margin-bottom: 10px; /* Reduce space below the heading */
+    padding: 5px 300px;
+    margin-bottom: 10px;
 }
 
 /* Reduce space between sections */
 .container_for_caption {
-    padding: 10px 200px; /* Adjust padding */
-    margin-bottom: 20px; /* Adjust gap between sections */
+    padding: 10px 300px; 
+    margin-bottom: 20px;
 }
 
-/* ------- Responsive Adjustments - Fix for Overlapping ------ */
+/* ------- Responsive Adjustments ------- */
 @media (max-width: 1100px) {  
    .container {
-      padding: 40px 5%; /* Reduce side padding */
-      flex-direction: column; /* Stack sections on smaller screens */
+      padding: 50px 5%;
+      flex-direction: column;
       align-items: center;
    }
 
-   /* NEW: Make sure left-right sections stack together */
    .section-container {
-      flex-direction: column; /* Stack left and right sections */
+      flex-direction: column;
       align-items: center;
    }
 
    .left-section, .right-section {
-      width: 100%; /* Full width for both sections */
+      width: 100%;
       text-align: center;
    }
 
    .left-section {
-      margin-right: 0; /* Remove unnecessary margin */
+      margin-right: 0;
    }
 
    .circular-image {
-      width: 150px; /* Reduce size for smaller screens */
-      height: 150px;
+      width: 160px;
+      height: 160px;
    }
 }
 
-/* ------- General Button ------*/
+/* ------- General Button ------- */
 .btn {
    background-color: #eeecec;
    color: #444;
    border: none;
    border-radius: 5px;
-   padding: 8px 18px;
+   padding: 6px 15px;
    margin-right: 10px;
    cursor: pointer;
    font-family: Arial, Helvetica, sans-serif;
-   font-size: 16px;
 }
 
 .button-container {
-    margin-top: 10px; /* Ensures button is placed correctly */
+    margin-top: 10px;
 }
 
 .btn:hover {
    background-color: rgb(172, 169, 169);
 }
 
-/* ------- Company Logos and Interactive Button ------*/
+/* ------- Company Logos and Interactive Button ------- */
 .icon-container {
    display: block;
    margin-bottom: 10px;
@@ -142,7 +144,7 @@ h2 {
    color: inherit;
    display: flex;
    align-items: center;
-   justify-content: center; /* Center icons */
+   justify-content: center;
 }
 
 .icon-container img {
@@ -165,52 +167,47 @@ h2 {
    font-size: 18px;
 }
 
-/* ------- Image and Caption (Responsive-Friendly) ------*/
+/* ------- Image and Caption (Responsive-Friendly) ------- */
 .container_for_caption {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px 8%; /* Adjust padding for better responsiveness */
+    padding: 20px 10%;
     margin-bottom: 15px;
-    gap: 20px; /* Space between image & text */
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
+/* Image container */
 .image {
-   flex: 0 0 180px; /* Prevents excessive shrinking */
+   flex: 0 0 200px; /* Fix image size */
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .image img {
-    width: 100%;
-    max-width: 180px; /* Ensures images stay proportionate */
-    height: auto; /* Keeps aspect ratio */
-    border-radius: 8px; /* Slightly rounded corners for aesthetics */
-    display: block;
+    width: 200px; /* Ensure same size for all images */
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
+/* Text description */
 .description {
     flex: 1;
     display: flex;
     flex-direction: column;
-    max-width: 600px; /* Prevents text from stretching too wide */
-    font-size: 16px; /* Slightly reduced for readability on phones */
+    max-width: 600px;
 }
 
-/* ------- Full Mobile Optimization ------- */
-@media screen and (max-width: 768px) {
-    /* Stack sections fully */
-    .container {
-        padding: 30px 5%;
-    }
-
-    .full_sections,
+/* ------- Mobile Optimization ------- */
+@media screen and (max-width: 900px) {
     .container_for_caption {
-        padding: 10px 5%; /* Adjust padding */
-    }
-
-    .container_for_caption {
-        flex-direction: column; /* Stack image and text */
+        flex-direction: column;
         align-items: center;
+        padding: 20px 5%;
+        margin-bottom: 40px;
         text-align: center;
     }
 
@@ -220,29 +217,57 @@ h2 {
     }
 
     .image img {
-        max-width: 140px; /* Slightly smaller images for better fit */
+        width: 180px; /* Keep images uniform */
+        height: 180px;
     }
 
     .description {
-        max-width: 100%; /* Prevents text from being too narrow */
+        max-width: 100%;
+    }
+}
+
+/* Full Mobile Optimization */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 30px 5%;
     }
 
-    /* Adjust button for smaller screens */
+    .full_sections,
+    .container_for_caption {
+        padding: 10px 5%;
+    }
+
+    .container_for_caption {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .image img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .description {
+        max-width: 100%;
+    }
+
     .btn {
         font-size: 14px;
         padding: 6px 12px;
     }
 }
 
-/* Additional styles for ultra-small devices */
+/* Ultra Small Screens */
 @media screen and (max-width: 480px) {
     .circular-image {
-        width: 120px; /* Make images smaller */
-        height: 120px;
+        width: 140px;
+        height: 140px;
     }
 
-    .right-section {
-        font-size: 16px; /* Reduce font size for better fit */
+    .image img {
+        width: 140px;
+        height: 140px;
     }
 
     .icon-container img {
