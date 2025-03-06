@@ -52,8 +52,16 @@ body {
 
 /* Ensures proper spacing on larger screens */
 .full_sections {
-   padding: 10px 15%;
+    padding: 5px 300px;  /* Reduce padding */
+    margin-bottom: 10px; /* Reduce space below the heading */
 }
+
+/* Reduce space between sections */
+.container_for_caption {
+    padding: 10px 300px; /* Reduce padding */
+    margin-bottom: 20px; /* Adjust gap between sections */
+}
+
 
 /* ------- Responsive Adjustments ------- */
 @media (max-width: 900px) {
@@ -171,6 +179,11 @@ body {
 
     .button-container {
         margin-top: 15px; /* Ensures buttons don't stick to images */
+    }
+
+   .full_sections {
+        padding: 5px 20px; 
+        margin-bottom: 5px;
     }
 }
 
