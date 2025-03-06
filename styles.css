@@ -82,9 +82,7 @@ body {
 }
 
 .button-container {
-   display: flex;
-   flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
-   justify-content: center;
+    margin-top: 10px; /* Ensures button is placed correctly */
 }
 
 .btn:hover {
@@ -128,11 +126,10 @@ body {
 
 /* ------- Image and Caption ------*/
 .container_for_caption {
-   display: flex;
-   justify-content: center;
-   align-items: flex-start;
-   padding: 0px 15% 30px;
-   flex-wrap: wrap; /* Ensures responsiveness */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 300px; /* Matches TopicGemini */
 }
 
 .image {
@@ -141,14 +138,16 @@ body {
 }
 
 .image img {
-   width: 150px;
-   height: 150px;
-   object-fit: cover;
-   display: block;
+    width: 150px;  /* Ensures consistent image width */
+    height: 150px; /* Ensures consistent image height */
+    object-fit: cover; /* Maintains aspect ratio */
+    display: block; /* Avoids inline spacing issues */
 }
 
 .description {
-   flex: 1;
+    flex: 1; /* Ensures equal space for text */
+    display: flex;
+    flex-direction: column;
 }
 
 /* ------- Mobile Adjustments ------- */
