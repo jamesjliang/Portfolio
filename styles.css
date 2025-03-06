@@ -6,6 +6,7 @@ html, body {
 h2 {
     margin-top: 5px; /* Reduce top spacing */
     margin-bottom: 5px; /* Reduce bottom spacing */
+    text-align: left !important; /* Ensure titles are always left-aligned */
 }
 
 .fixed {
@@ -61,6 +62,7 @@ body {
 .right-section {
    width: 70%;
    font-size: 18px;
+   text-align: left; /* Ensure text remains left-aligned */
 }
 
 /* Ensures proper spacing on larger screens */
@@ -154,44 +156,69 @@ body {
    font-size: 18px;
 }
 
-/* ------- Image and Caption (Responsive-Friendly) ------*/
+/* ------- Image and Caption (Responsive-Friendly) ------ */
 .container_for_caption {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start; /* Align text and image to the left */
+    align-items: center; /* Keep them vertically aligned */
     padding: 20px 10%; /* Responsive side padding */
     margin-bottom: 15px;
-    gap: 20px; /* Space between image & text */
+    gap: 15px; /* Reduce gap between image & text */
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
+/* Image section remains fixed in size */
 .image {
-   flex: 0 0 180px; /* Prevents excessive shrinking */
+   flex: 0 0 160px; /* Slightly reduced to bring text closer */
 }
 
 .image img {
     width: 100%;
-    max-width: 180px; /* Ensures images stay proportionate */
-    height: auto; /* Keeps aspect ratio */
-    border-radius: 8px; /* Slightly rounded corners for aesthetics */
+    max-width: 160px; /* Keeps image proportional */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px;
     display: block;
 }
 
+/* Text container adapts without getting too stretched */
 .description {
     flex: 1;
     display: flex;
     flex-direction: column;
-    max-width: 600px; /* Prevents text from stretching too wide */
+    max-width: 550px; /* Prevents text from stretching too wide */
+    text-align: left !important; /* Ensure text remains left-aligned */
 }
 
 /* ------- Responsive Adjustments ------- */
 @media screen and (max-width: 900px) {
     .container_for_caption {
-        flex-direction: column; /* Stack image and text */
+        flex-direction: row; /* Keep image and text side-by-side longer */
         align-items: center;
         padding: 20px 5%; /* Reduce side padding */
-        margin-bottom: 40px;
+        text-align: left;
+        gap: 10px; /* Reduce space between image and text */
+    }
+
+    .image {
+        flex: 0 0 140px; /* Keep the image a bit smaller */
+    }
+
+    .image img {
+        max-width: 140px;
+    }
+
+    .description {
+        max-width: 100%; /* Prevents text from being too narrow */
+    }
+}
+
+/* Stack only when absolutely necessary */
+@media screen and (max-width: 600px) {
+    .container_for_caption {
+        flex-direction: column; /* Stack only on very small screens */
+        align-items: center;
         text-align: center;
+        gap: 15px;
     }
 
     .image {
@@ -200,10 +227,10 @@ body {
     }
 
     .image img {
-        max-width: 150px; /* Slightly smaller images for better fit */
+        max-width: 120px; /* Further reduce image size */
     }
 
     .description {
-        max-width: 100%; /* Prevents text from being too narrow */
+        text-align: center;
     }
 }
