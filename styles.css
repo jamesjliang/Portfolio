@@ -28,9 +28,8 @@ body {
    display: flex;
    justify-content: center;
    align-items: flex-start;
-   padding: 50px 10%; /* Reduce top padding, keep responsiveness */
-   flex-wrap: wrap; /* Ensures sections wrap on smaller screens */
-   margin-bottom: 10px; /* Reduce extra space below */
+   padding: 70px 15%; /* Responsive padding */
+   flex-wrap: wrap; /* Allows sections to wrap on small screens */
 }
 
 .left-section, .right-section {
