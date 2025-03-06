@@ -129,7 +129,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px 300px; /* Matches TopicGemini */
+    padding: 20px 300px; /* Desktop spacing */
+    margin-bottom: 40px; /* Ensures separation between projects */
 }
 
 .image {
