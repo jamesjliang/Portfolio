@@ -123,8 +123,10 @@ display: flex; /* Use flexbox to align buttons */
    margin-right: 20px; /* Adjust spacing between image and text */
 }
 .image img {
-   width: 150px; /* Set width of the image */
-   height: auto; /* Maintain aspect ratio */
+    width: 150px; /* Adjust based on your design */
+    height: 150px; /* Adjust based on your design */
+    object-fit: cover; /* Ensures images fill the dimensions while maintaining aspect ratio */
+    display: block; /* Removes extra spacing */
 }
 .description {
    flex: 1; /* Make text and button flexible */
