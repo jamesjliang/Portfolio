@@ -5,7 +5,7 @@ html, body {
 
 h2 {
     margin-top: 5px; /* Reduce top spacing */
-    margin-bottom: 5px; /* Reduce bottom spacing */
+    margin-bottom: 5px; /* Reduce space below heading */
 }
 
 .fixed {
@@ -54,23 +54,55 @@ body {
    font-size: 18px;
 }
 
-/* Ensures proper spacing on larger screens */
+/* ------- Fixes for Projects & Articles Sections ------- */
 .full_sections {
     padding: 5px 300px;  /* Reduce padding */
     margin-bottom: 10px; /* Reduce space below the heading */
+    text-align: center;  /* Ensures consistency */
 }
 
-/* Reduce space between sections */
-.container_for_caption {
-    padding: 10px 300px; /* Reduce padding */
-    margin-bottom: 20px; /* Adjust gap between sections */
+/* Ensures consistent alignment for both Projects & Articles */
+.projects-container, .articles-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 300px; /* Desktop spacing */
+    margin-bottom: 15px; /* Ensures separation between sections */
+    flex-wrap: wrap; /* Allow wrapping to avoid overlap */
 }
 
-/* ------- Responsive Adjustments - Fix for Overlapping ------ */
-@media (max-width: 1100px) {  /* Trigger vertical layout earlier */
+/* Adjusts formatting inside project/article sections */
+.project-item, .article-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%; /* Prevents content from squishing */
+}
+
+.project-image, .article-image {
+   flex: 0 0 auto;
+   margin-right: 20px;
+}
+
+.project-image img, .article-image img {
+    width: 150px;  /* Consistent image width */
+    height: 150px; /* Consistent image height */
+    object-fit: cover; /* Maintains aspect ratio */
+    display: block; /* Avoids inline spacing issues */
+}
+
+.project-description, .article-description {
+    flex: 1; /* Ensures equal space for text */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ------- Mobile & Small Screen Adjustments ------- */
+@media (max-width: 1100px) {  /* Adjusts layout sooner */
    .container {
       padding: 50px 5%; /* Reduce side padding */
-      flex-direction: column; /* Stack sections on smaller screens */
+      flex-direction: column; /* Stack sections earlier */
       align-items: center;
    }
 
@@ -81,6 +113,23 @@ body {
 
    .left-section {
       margin-right: 0; /* Remove unnecessary margin */
+   }
+
+   /* Ensure projects/articles don't overlap */
+   .projects-container, .articles-container {
+       flex-direction: column;
+       padding: 20px 50px; /* Reduce padding */
+   }
+
+   .project-item, .article-item {
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+   }
+
+   .project-image, .article-image {
+       margin-right: 0; /* Remove margin to prevent misalignment */
+       margin-bottom: 10px; /* Adds space between image & text */
    }
 }
 
@@ -139,7 +188,7 @@ body {
    font-size: 18px;
 }
 
-/* ------- Image and Caption ------*/
+/* ------- Image and Caption Fixes for Articles ------- */
 .container_for_caption {
     display: flex;
     justify-content: center;
