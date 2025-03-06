@@ -130,7 +130,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     padding: 20px 300px; /* Desktop spacing */
-    margin-bottom: 40px; /* Ensures separation between projects */
+    margin-bottom: 15px; /* Ensures separation between projects */
 }
 
 .image {
