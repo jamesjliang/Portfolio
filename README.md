@@ -1,3 +1,3 @@
 # Portfolio
 
-Resume and Personal Website: jamesjliang.com
+Resume and Personal Website: https://jamesjliang.github.io/Portfolio/
